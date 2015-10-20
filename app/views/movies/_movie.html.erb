@@ -31,11 +31,15 @@
                 </div><!--watch-info-->
 
                 <div class="watch-info">
-                <div class="trailer-button">
-                <a class="trailer-button" href="https://www.youtube.com/results?search_query=<%= movie.title %>+movie+official+trailer" target="_blank">YouTube Trailer</a>
-                </div><!--trailer-button-->
+                  <div class="trailer-button">
+                    <a class="trailer-button" href="https://www.youtube.com/results?search_query=<%= movie.title %>+movie+official+trailer" target="_blank">YouTube Trailer</a>
+                  </div><!--trailer-button-->
+                  <br>
+                    <a href="https://www.amazon.com/s/url=search-alias%3Dinstant-video&field-keywords=<%= movie.title %>" target="_blank"><i class="fa fa-amazon"></i>Amazon</a>
+                  <br>
+                    <a href="http://www.netflix.com/search/<%= movie.title %>" target="_blank">Netflix</a>
                 </div><!--watch-info-->
-                
+
               </div><!--col-sm-3-->
 
               <div class="col-sm-9">
