@@ -34,10 +34,15 @@
                   <div class="trailer-button">
                     <a class="trailer-button" href="https://www.youtube.com/results?search_query=<%= movie.title %>+movie+official+trailer" target="_blank">YouTube Trailer</a>
                   </div><!--trailer-button-->
-                  <br>
-                    <a href="https://www.amazon.com/s/url=search-alias%3Dinstant-video&field-keywords=<%= movie.title %>" target="_blank"><i class="fa fa-amazon"></i>Amazon</a>
-                  <br>
+
+                 <!--  links to amazon and netflix -->
+                  <div class="tester <%= 'hidden' if movie.watch_url.present? %>">
+                    <br>
                     <a href="http://www.netflix.com/search/<%= movie.title %>" target="_blank">Netflix</a>
+                    <br>
+                    <a href="https://www.amazon.com/s/url=search-alias%3Dinstant-video&field-keywords=<%= movie.title %>" target="_blank"><i class="fa fa-amazon"></i>Amazon</a>
+                  </div><!--  links to amazon and netflix -->
+
                 </div><!--watch-info-->
 
               </div><!--col-sm-3-->
