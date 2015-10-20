@@ -110,7 +110,7 @@ class MoviesController < ApplicationController
 
     # save new movie object to the database
     respond_to do |format|
-      if @movie.save!
+      if @movie.save
         format.html { redirect_to movies_url, notice: 'Movie was successfully created.' }
         format.json { render :show, status: :created, location: @movie }
       else
