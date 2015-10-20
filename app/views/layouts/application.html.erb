@@ -67,17 +67,20 @@
           </li><!--WATCHLIST dropdown-->
 
         </ul>
-        <form class="navbar-form navbar-left" role="search">
-          <%= form_tag(movies_path, method: "get", role: "search", class: "navbar-form navbar-left") do %>
-          <div class="form-group">
-          <%= text_field_tag(:search, nil, placeholder: "Movie Title", class: "form-control") %>
+
+
+          <form class="navbar-form navbar-left" action="/movies">
+            <input type="text" name="search" id="search" placeholder="Movie Title" class="form-control" />
+            <input type="hidden" value="authenticity_token">
+          </form>
+          <div>
+              <%= link_to ' ', movies_path, class: "btn btn-default fa fa-th-list" %>
+              <%= link_to '+ ', new_movie_path, class: "btn btn-default fa fa-film" %>
+              <a class="btn btn-default fa fa-search" href="/apisearch"> API </a>
           </div>
-          <button type="submit" class="btn btn-default fa"> Search </button>
-          <%= link_to ' ', movies_path, class: "btn btn-default fa fa-th-list" %>
-          <%= link_to '+ ', new_movie_path, class: "btn btn-default fa fa-film" %>
-          <a class="btn btn-default fa fa-search" href="/apisearch"> API </a>
-          <% end %>
-        </form>
+
+
+
 
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
