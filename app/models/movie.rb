@@ -14,7 +14,8 @@ class Movie < ActiveRecord::Base
   end
 
   def self.text_search(search)
-    where("title ilike ?", '%' + search + '%')
+    # where("title ilike ?", '%' + search + '%')
+    where("title @@ :s or imdb_actors @@ :s", s: search)
   end
 
   def self.been_watched
