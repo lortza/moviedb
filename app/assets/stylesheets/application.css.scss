@@ -254,19 +254,11 @@ a:hover {
   font-style: italic;
  }
 
-.trailer-button a {
-  color: white;
-  font-size: 93%;
-  background-color: #31b0d5;
-  border: solid 1px #269abc;
-  border-radius: 3px;
-  padding: 3% 6%;
-  text-decoration: none;
-}
 
-.trailer-button a:hover {
-  background-color: #269abc;
-  text-decoration: none;
+.watch-link {
+  text-align: center;
+  width: 85px;
+  margin: 10px 0px;
 }
 
  /* FORMS */
@@ -304,4 +296,11 @@ a:hover {
   color: white;
 }
 
+@media screen and (max-device-width: 360px) and (orientation: portrait) {
+  .watch-link {
+    text-align: center;
+    width: 70px;
+    margin: 7px 0px;
+  }
+}
 
