@@ -31,6 +31,7 @@
                 </div><!--watch-info-->
 
                 <div class="watch-info">
+                <!-- link to youtube trailer -->
                   <a href="https://www.youtube.com/results?search_query=<%= movie.title %>+movie+official+trailer" target="_blank"><%= image_tag 'trailer.png', class: "watch-link" %></a>
                   <br>
                  <!--  links to amazon and netflix -->
@@ -54,7 +55,8 @@
                 <%= link_to ' ', movie, method: :delete, data: { confirm: 'Are you sure you want to delete this movie?' }, class: "fa fa-trash-o fa-lg" %>
               </div><!--pull-right-->
               <div class="stats">
-                <p <%= 'hidden' unless movie.imdb_url.present? %>><%= link_to "IMDB", movie.imdb_url, :target => "_blank" %>: <%= movie.imdb_rating %> of 10 | <%= movie.runtime %> min | <%= movie.imdb_genre %> | Starring: <%= movie.imdb_actors %></p>
+                <p <%= 'hidden' unless movie.imdb_url.present? %>>
+                <%= link_to image_tag("imdb.png", class: "imdb-link"), movie.imdb_url, :target => "_blank" %>  <%= movie.imdb_rating %> of 10 | <%= movie.runtime %> min | <%= movie.imdb_genre %> | Starring: <%= movie.imdb_actors %></p>
                 <hr/>
               </div><!-- stats -->
 

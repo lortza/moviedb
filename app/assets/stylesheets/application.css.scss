@@ -190,7 +190,7 @@ a:hover {
   background-color: green;
   margin: -15px 0px 5px 0px;
   padding: 20px 10px 10px 10px;;
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .movie-status-watched {
@@ -202,7 +202,7 @@ a:hover {
   background-color: gray;
   margin: -15px 0px 5px 0px;
   padding: 20px 10px 10px 10px;
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .btn-hider {
@@ -257,8 +257,13 @@ a:hover {
 
 .watch-link {
   text-align: center;
-  width: 85px;
-  margin: 10px 0px;
+  max-width: 85px;
+  max-height: 30px;
+  margin: 8px 0px;
+}
+
+.imdb-link {
+  max-height: 15px;
 }
 
  /* FORMS */
