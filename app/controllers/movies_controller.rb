@@ -75,7 +75,8 @@ class MoviesController < ApplicationController
 
       # check if API has an error. if so, use movie_params
       if @results[:Error] == "Movie not found!"
-        @movie_info = movie_params
+        redirect_to new_movie_path, :alert => "Title not found in the API. If you still want to add it,
+        select the 'bypass the API' option" and return
 
       else
         # parse the date
